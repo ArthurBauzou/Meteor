@@ -13,7 +13,7 @@
 </head>
 
 <body class="bg-secondary">
-  <!-- Navbar -->
+  <!-- Navbar inutile -->
   <nav class="navbar navbar-dark bg-dark p-3 px-4 ">
     <a class="navbar-brand navbar-left" href="index.html">
       <i class="fa-solid fa-meteor h2"></i>
@@ -25,13 +25,13 @@
       </a>
     </div>
   </nav>
+  <!-- inputs -->
 
-  <!-- contenu -->
   <div class="row">
 
     <ul class="col mt-4 d-none d-md-block m-5 nav">
-      <li class="navitem border border-dark rounded p-2 px-4 nav-item mb-2">
-        <a class="text-nowrap text-dark text-decoration-none" href="moyenne.html">Moyenne</a>
+      <li class="navitem bg-dark rounded p-3 px-4 nav-item mb-2">
+        <a class="text-nowrap text-light text-decoration-none" href="moyenne.html">Moyenne</a>
       </li>
       <li class="navitem border border-dark rounded p-2 px-4 nav-item mb-2">
         <a class="text-nowrap text-dark text-decoration-none" href="2boucles.html">2 Boucles</a>
@@ -42,20 +42,31 @@
     </ul>
     
     <main class="bg-dark text-light container p-4 py-6 rounded mt-4 col-md-8">
-      <h3 class="text-center mb-4 mx-4 pb-4 border-bottom">INDEX</h3>
-      <p class="text-secondary">Bienvenu à l’accueil</p>
-
-      <div id="resultats">
-  
-      </div>
+      <section class="">
+        <h3 class="text-center mb-4 mx-4 pb-4 border-bottom">NOTES et MOYENNE</h3>
+        <p class="text-secondary mb-3">Ajoutez des notes depuis la boite ci dessous en les séparant par des espaces</p>
+        <p class="text-dark text-center my-3" style="font-size: 0.6em">0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p>
+        <div class="input-group mb-3 px-3" id="notebtn">
+          <button class="btn btn-outline-light" type="button" onclick="addnotes()">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <input type="text" class="form-control" placeholder="Ajouter des notes">
+        </div>
+        <div class="input-group mb-3">
+          <button type="button" class="btn btn-outline-light mx-auto" onclick="moyenne()">MOYENNE</button>
+        </div>
+      </section>
+      <!-- notes -->
+      <section id="notes" class="text-light bg-secondary d-flex flex-wrap justify-content-between p-4 rounded mt-4 gap-2">
+        <div class="moyDiv rounded p-2 px-3 bg-dark me-2 mt-1 text-center h4 mb-3" style="width: 100%; display:none"></div>
+      </section>
     </main>
 
     <div class="col"></div>
   </div>
 
+</body>
 
-<script>
-
-</script>
+<script src="moyScript.js"></script>
 
 </html>

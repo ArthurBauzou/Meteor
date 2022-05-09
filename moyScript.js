@@ -59,7 +59,7 @@ function addnotes() {
 let notes = document.querySelector("#notebtn input");
 notes.addEventListener('keydown', (e) => {
     if (e.code === "Enter") { addnotes() }
-})
+});
 
 // fonction principale : fait la moyenne et colore les notes en fonction
 function moyenne() {
