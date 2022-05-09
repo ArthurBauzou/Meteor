@@ -1,0 +1,33 @@
+.note-critique {
+    background: rgb(46,8,5);
+    background: radial-gradient(circle, rgba(46,8,5,1) 0%, rgba(121,26,9,1) 35%, rgba(233,41,23,1) 100%);
+}
+.note-royal {
+    background: rgb(42,37,59);
+    background: radial-gradient(circle, rgba(42,37,59,1) 0%, rgba(121,58,26,1) 35%, rgba(238,179,44,1) 100%); 
+}
+.note-cool {
+    background: rgb(43,59,37);
+    background: radial-gradient(circle, rgba(43,59,37,1) 0%, rgba(26,121,44,1) 35%, rgba(44,238,160,1) 100%);
+}
+.note-awesome {
+    background: rgb(39,0,88);
+    background: radial-gradient(circle, rgba(39,0,88,1) 0%, rgba(100,21,147,1) 46%, rgba(196,120,181,1) 100%); 
+}
+.noteDiv {
+    /* position-relative rounded p-2 px-3 bg-dark me-2 mb-1 mt-1 note-critique border border-3 border-dark */
+    position: relative;
+    border-radius: 0.3em;
+    padding: 0.5em 1.2em 0.6em 1.2em;
+    width: fit-content;
+    margin: 0.2em auto;
+    border: 0.2em solid;
+}
+.noteSmile {
+    transform: translate(-50%,-50%);
+    position: absolute;
+    color: black;
+    top: 0.2em;
+    left: 0.3em;
+    font-size: 1.2em;
+}
