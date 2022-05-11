@@ -64,26 +64,35 @@ notes.addEventListener('keydown', (e) => {
 // calcul du max
 function getMaxNote() {
     let divs = document.querySelectorAll("#notes div.noteDiv");
-    
     if (divs.length != 0) {
-        let maxdiv = divs[0];
-        let oldcrown = document.querySelector("div.noteBest");
-        if (oldcrown) { oldcrown.remove() };
-
-        divs.forEach(e => {
-            if (parseFloat(e.innerHTML) > parseFloat(maxdiv.innerHTML)) {
-                maxdiv = e
+        // nettoyage des anciennes couronnes
+        let oldcrown = document.querySelectorAll("div.noteBest");
+        if (oldcrown) { oldcrown.forEach(e => {
+            e.remove();
+        }) };
+        // creation du tableau des max (pour gérer les cas d’égalités)
+        let maxdiv = [];
+        maxdiv.push(divs[0]);
+        // peuplement du tableau des notes maximales
+        for (i=1;i<divs.length;i++) {
+            if (parseFloat(divs[i].innerHTML) > parseFloat(maxdiv[0].innerHTML)) {
+                maxdiv = [];
+                maxdiv.push(divs[i]);
             }
+            else if (parseFloat(divs[i].innerHTML) == parseFloat(maxdiv[0].innerHTML)) {
+                maxdiv.push(divs[i]);
+            }
+        }
+        // fabrication des couronnes pour les winners
+        maxdiv.forEach(e => {
+            let crown = document.createElement("div");
+            crown.classList.add("noteBest");
+            let icon = document.createElement("i");
+            icon.classList.add("fa-solid")
+            icon.classList.add("fa-crown")
+            crown.append(icon);
+            e.append(crown);
         })
-        console.log(maxdiv)
-        console.log(maxdiv.innerHTML)
-        let crown = document.createElement("div");
-        crown.classList.add("noteBest");
-        let icon = document.createElement("i");
-        icon.classList.add("fa-solid")
-        icon.classList.add("fa-crown")
-        crown.append(icon);
-        maxdiv.append(crown);
     }
 }
 
