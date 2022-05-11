@@ -1,3 +1,5 @@
+/* Page MOYENNE */
+
 .note-critique {
     background: rgb(46,8,5);
     background: radial-gradient(circle, rgba(46,8,5,1) 0%, rgba(121,26,9,1) 35%, rgba(233,41,23,1) 100%);
@@ -15,7 +17,6 @@
     background: radial-gradient(circle, rgba(39,0,88,1) 0%, rgba(100,21,147,1) 46%, rgba(196,120,181,1) 100%); 
 }
 .noteDiv {
-    /* position-relative rounded p-2 px-3 bg-dark me-2 mb-1 mt-1 note-critique border border-3 border-dark */
     position: relative;
     border-radius: 0.3em;
     padding: 0.5em 1.2em 0.6em 1.2em;
@@ -47,5 +48,44 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: linear;
+}
 
+/* Page PICSUM */
+
+.imgKeepBtn {
+    position: absolute;
+    color: black;
+    bottom: 0.5em;
+    left: 0.5em;
+    font-size: 1.4em;
+    background: rgba(255, 255, 255, 0.2);
+    width: 1.8em;
+    height: 1.8em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.8em;
+    transition: 0.2s;
+}
+
+.imgReloadBtn {
+    position: absolute;
+    color: black;
+    bottom: 0.5em;
+    right: 0.5em;
+    font-size: 1.5em;
+    background: rgba(255, 255, 255, 0.2);
+    width: 1.8em;
+    height: 1.8em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.8em;
+    transition: 0.2s;
+}
+
+.imgReloadBtn:hover, .imgKeepBtn:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.imgHover {
+    position: relative;
 }

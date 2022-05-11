@@ -23,11 +23,11 @@ function creaTable(x, y) {
         table.classList.add("table-striped");
 
         // création d’une ligne en fonction de dims.y
-        for (i = 0; i < dims.y; i++) {
+        for (i = 0; i < parseInt(dims.y)+1; i++) {
             let row = document.createElement("tr");
             // Création d’une cellule dans cette ligne en fonction de dims.x
             // Lors du premier passage, on crée des TH et non des TD
-            for (j = 0; j < dims.x; j++) {
+            for (j = 0; j < parseInt(dims.x)+1; j++) {
                 let tableCell;
                 if (i == 0) {
                     tableCell = document.createElement("th");
