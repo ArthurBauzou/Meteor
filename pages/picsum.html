@@ -56,13 +56,11 @@
 
         <div class="col-xl-4 col-md-6 btnShower">
           <img class="img-fluid" src="https://picsum.photos/id/527/400">
-          <div class="imgHover" hidden>
-            <div class="imgKeepBtn">
-              <i class="fa-solid fa-check"></i>
-            </div>
-            <div class="imgReloadBtn">
-              <i class="fa-solid fa-rotate-right"></i>
-            </div>
+          <div class="imgKeepBtn" hidden>
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <div class="imgReloadBtn" hidden>
+            <i class="fa-solid fa-rotate-right"></i>
           </div>
         </div>
 
@@ -97,20 +95,26 @@ imgIds.forEach(id => {
   results.append(imgdiv);
 });
 
-let imgHovers = document.querySelectorAll(".btnShower");
-imgHovers.forEach(el => {
+let btnShowers = document.querySelectorAll(".btnShower");
+btnShowers.forEach(el => {
   el.addEventListener("mouseenter", (ev) => {
-    ev.currentTarget.querySelector(".imgHover").hidden = false;
+    ev.currentTarget.querySelector(".imgKeepBtn").hidden = false;
+    ev.currentTarget.querySelector(".imgReloadBtn").hidden = false;
+
   });
   el.addEventListener("mouseleave", (ev) => {
-    ev.currentTarget.querySelector(".imgHover").hidden = true;
+    ev.currentTarget.querySelector(".imgKeepBtn").hidden = true;
+    ev.currentTarget.querySelector(".imgReloadBtn").hidden = true;
   })
 })
 
-// function showBtns(e) {
-//   e.currentTarget.querySelector(".imgHover").hidden = false;
-//   console.log('hahaa')
-// }
+let keepBtns = document.querySelectorAll(".imgKeepBtn");
+keepBtns.forEach(el => {
+  el.addEventListener('click', (ev) => {
+    ev.currentTarget.style.backgroundColor = "rgba(15,200,90,1)"
+  })
+})
+
 
 </script>
 
