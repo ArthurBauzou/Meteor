@@ -42,11 +42,12 @@
     </ul>
     
     <main class="bg-dark text-light container p-4 py-6 rounded mt-4 col-md-8">
-      <h3 class="text-center mb-4 mx-4 pb-4 border-bottom">INDEX</h3>
-      <p class="text-secondary">Bienvenu à l’accueil</p>
+      <h3 class="text-center mb-4 mx-4 pb-4 border-bottom">EXERCICES DE JAVASCRIPT</h3>
+      <!-- <p class="text-secondary">Le javascript c’est fantastique</p> -->
 
       <div id="resultats">
-  
+        <div class="container p-4">
+        </div>
       </div>
     </main>
 
@@ -55,6 +56,22 @@
 
 
 <script>
+
+let imageN = Math.floor(Math.random() * 8) + 1;
+let imgSrc = "/Meteor/images/meme (" + imageN + ").jpg";
+let img = document.createElement("img");
+img.src = imgSrc;
+img.classList.add("img-fluid");
+let cont = document.querySelector("#resultats > div");
+cont.append(img);
+
+if (imageN == 4) {
+  let expl = document.createElement("p");
+  expl.classList.add("text-secondary");
+  expl.classList.add("mt-2");
+  expl.innerHTML = "Oui c’est juste le meme « My parents are DEAAAAAD » mais c’est classic batman alors c’est cool";
+  cont.append(expl);
+}
 
 </script>
 
