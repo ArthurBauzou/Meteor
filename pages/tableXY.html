@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link rel="stylesheet" href="/Meteor/monstyle.css">
 
-  <title>git conflit !</title>
+  <title>Meteor - Table</title>
 </head>
 
 <body class="bg-secondary">
@@ -70,63 +70,5 @@
 </body>
 
 <script src="/Meteor/scripts/tableScript.js"></script>
-
-<!-- <script>
-
-let dims = {
-  x: 0,
-  y: 0
-};
-let resu = document.getElementById("resultats");
-
-function creaTable(x,y) {
-  dims.x = document.getElementById("inputx").value;
-  dims.y = document.getElementById("inputy").value;
-  
-  if (dims.x != 0 &&
-  dims.x != '' &&
-  dims.y != 0 &&
-  dims.y != '') {
-    
-    let oldtable = resu.querySelector("table");
-    if (oldtable) {oldtable.remove()}
-
-    let table = document.createElement("table");
-    table.classList.add("table");
-    table.classList.add("table-dark");
-    table.classList.add("table-striped");
-        
-    for (i=0; i<dims.y; i++) {
-
-      let row = document.createElement("tr");
-      for (j=0; j<dims.x; j++) {
-        let tableCell;
-        if (i==0) {
-          tableCell = document.createElement("th");
-          tableCell.innerHTML = 'Colonne ' + (j+1);
-        }
-        else { 
-          tableCell = document.createElement("td")
-          tableCell.classList.add('text-center')
-          tableCell.innerHTML = i+'.'+j;
-        }
-        row.append(tableCell)
-      }
-
-      if (i<2) {
-        if (i==0) { table.append(document.createElement("thead")) }
-        else      { table.append(document.createElement("tbody")) }
-      }
-      let tbloc;
-      if (i==0) { tbloc = table.querySelector("thead") }
-      else      { tbloc = table.querySelector("tbody") }
-      tbloc.append(row)
-    }
-    resu.append(table);
-  }
-
-}
-
-</script> -->
 
 </html>

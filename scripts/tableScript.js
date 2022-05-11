@@ -57,9 +57,9 @@ function creaTable(x, y) {
                 else { table.append(document.createElement("tbody")) }
             }
             // Puis il faut ajouter la ligne crée plus haut à cet élément THEAD ou TBODY
-            let tbloc;
-            if (i == 0) { tbloc = table.querySelector("thead") }
-            else { tbloc = table.querySelector("tbody") }
+            let tbloc = i==0 ? table.querySelector("thead") : table.querySelector("tbody");
+            // if (i == 0) { tbloc = table.querySelector("thead") }
+            // else { tbloc = table.querySelector("tbody") }
             tbloc.append(row)
         }
         resu.append(table);
