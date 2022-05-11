@@ -31,12 +31,22 @@ function creaTable(x, y) {
                 let tableCell;
                 if (i == 0) {
                     tableCell = document.createElement("th");
-                    tableCell.innerHTML = 'Colonne ' + (j + 1);
+                    if (j==0) { tableCell.innerHTML = '#' }
+                    else {
+                        tableCell.classList.add('text-center');
+                        tableCell.innerHTML = 'Colonne ' + j;
+                    }
                 }
                 else {
-                    tableCell = document.createElement("td")
-                    tableCell.classList.add('text-center')
-                    tableCell.innerHTML = i + '.' + (j+1);
+                    if (j == 0) {
+                        tableCell = document.createElement("th");
+                        tableCell.innerHTML = i ;
+                    }
+                    else {
+                        tableCell = document.createElement("td")
+                        tableCell.classList.add('text-center')
+                        tableCell.innerHTML = i + '.' + j;
+                    }
                 }
                 row.append(tableCell)
             } // à la fin de cette boucle, la ligne est crée et remplie de cellules

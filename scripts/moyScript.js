@@ -61,8 +61,34 @@ notes.addEventListener('keydown', (e) => {
     if (e.code === "Enter") { addnotes() }
 });
 
+// calcul du max
+function getMaxNote() {
+    let divs = document.querySelectorAll("#notes div.noteDiv");
+    
+    if (divs.length != 0) {
+        let maxdiv = divs[0];
+        let oldcrown = document.querySelector("div.noteBest");
+        if (oldcrown) { oldcrown.remove() };
+
+        divs.forEach(e => {
+            if (parseFloat(e.innerHTML) > parseFloat(maxdiv.innerHTML)) {
+                maxdiv = e
+            }
+        })
+        console.log(maxdiv)
+        console.log(maxdiv.innerHTML)
+        let crown = document.createElement("div");
+        crown.classList.add("noteBest");
+        let icon = document.createElement("i");
+        icon.classList.add("fa-solid")
+        icon.classList.add("fa-crown")
+        crown.append(icon);
+        maxdiv.append(crown);
+    }
+}
+
 // fonction principale : fait la moyenne et colore les notes en fonction
-function moyenne() {
+function moyenne(e) {
     let divs = document.querySelectorAll("#notes div.noteDiv");
     if (divs.length != 0) {
         // calcul de la moyenne
