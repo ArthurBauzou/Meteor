@@ -1,3 +1,9 @@
+/* GENERAL */
+
+body {
+    overflow-x: hidden;
+}
+
 /* Page MOYENNE */
 
 .note-critique {
