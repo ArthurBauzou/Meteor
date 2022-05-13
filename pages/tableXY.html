@@ -30,7 +30,11 @@
   <!-- contenu -->
   <div class="row">
 
-    <ul class="col mt-4 d-none d-md-block ms-5 me-2 nav">
+    <div class="burgerButton d-none" onclick="showMenu()">
+      <i class="fa-solid fa-caret-right"></i>
+    </div>
+
+    <ul class="col mt-4 d-none d-md-block ms-5 me-2 nav" id="custonav" popped="false">
       <li class="navitem border border-dark rounded p-2 px-4 nav-item mb-2">
         <a class="text-nowrap text-dark text-decoration-none" href="/Meteor/pages/moyenne.html">Moyenne</a>
       </li>
@@ -70,5 +74,6 @@
 </body>
 
 <script src="/Meteor/scripts/tableScript.js"></script>
+<script src="/Meteor/scriptGeneral.js"></script>
 
 </html>
